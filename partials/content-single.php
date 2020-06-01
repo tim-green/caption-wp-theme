@@ -19,7 +19,7 @@
         <ul class="card-summary">
             <?php
                 if ( function_exists( 'captionwp_show_summary' ) ) {
-                    instapress_show_summary();
+                    captionwp_show_summary();
                 }
             ?>
         </ul>
