@@ -1,0 +1,114 @@
+/*
+
+  Card
+  +
+
+*/
+
+.card {
+    display: block;
+    position: relative;
+    width: calc(100% + 2px);
+    margin: 0 -1px 3rem;
+    overflow: hidden;
+    background-color:$grayish-blue;
+    border: 1px solid $dark-blue;
+    border-radius: 3px;
+}
+.card.link-card {
+    margin-bottom: 0;
+}
+.card.link-card:hover .card-thumbnail-image {
+    -webkit-filter: brightness(120%);
+    filter: brightness(120%);
+}
+.sticky .card {
+    border: none;
+    box-shadow: 0 0 2px 1px $orange;
+}
+.card .card-permalink {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.card .card-permalink:focus {
+    outline-offset: -3px;
+}
+.card .card-thumbnail {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.card .card-thumbnail .card-thumbnail-image {
+    width: 100%;
+    height: auto;
+    @include prefix(transition, filter 0.5s, webkit ms);
+}
+
+.card .card-summary {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-family: "Hack", monospace;
+    font-size: 0.6875rem;
+    color: $medium-gray;
+}
+.card .card-summary::before {
+    content: "{";
+    display: block;
+   }
+
+.card .card-summary::after {
+    content: "}";
+    display: block;
+}
+
+.card .card-summary li {
+    display: block;
+    cursor: default;
+    margin-left: 2rem;
+    line-height: 1.75;
+}
+.card .card-summary li:not(:last-child)::after {
+    content: ',';
+}
+
+@media screen and (max-width: 479px) {
+    .card .card-summary li {
+        margin-left: 1rem;
+   }
+}
+
+.card .card-summary span {
+    color: $orange;
+}
+
+.card .card-summary strong {
+    color: $light-cyan;
+}
+
+.card .card-summary a {
+    position: relative;
+    z-index: 2;
+    color: $light-cyan;
+    border: none;
+}
+.card .card-summary a:hover {
+    color: $mid-cyan;
+}
+
+@media screen and (max-width: 479px) {
+    .card .card-summary {
+        padding: 1rem;
+   }
+}
+
+@media screen and (max-width: 767px) {
+    .card {
+        margin-bottom: 1.5rem;
+   }
+}
