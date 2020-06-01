@@ -40,8 +40,13 @@
 
 */
 
-
-
+@import "components/search-form";
+@import "components/pagination";
+@import "components/caption";
+@import "components/card";
+@import "components/comments";
+@import "components/gallery";
+@import "components/skip";
 /*
 
  ==== Sections ====
@@ -50,6 +55,7 @@
 
 @import "sections/header";
 @import "sections/main";
+@import "sections/content";
 @import "sections/footer";
 
 
