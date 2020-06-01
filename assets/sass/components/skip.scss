@@ -1,0 +1,32 @@
+/*
+
+  Skip
+  +
+
+*/
+.skip {
+	z-index: 100000;
+}
+.skip:focus {
+	display: inline-block;
+	cursor: pointer;
+	@include prefix(appearance, none, webkit ms moz);
+	max-width: 100%;
+	min-width: 6rem;
+	padding: 0.5rem 1rem;
+	overflow: hidden;
+	line-height: $base-line-height;
+	font-size: 0.8125rem;
+	font-weight: 400;
+	text-overflow: ellipsis;
+	text-align: center;
+	white-space: nowrap;
+	color: $grayish-blue;
+	background-color: $orange;
+	border: 1px solid $dark-blue;
+	border-radius: 2px;
+	transition: background-color .25s;
+}
+.skip:focus:hover {
+	background-color: $orange;
+}
