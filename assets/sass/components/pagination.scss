@@ -1,0 +1,46 @@
+/*
+
+  Pagination
+  +
+
+*/
+
+.pagination {
+	display: flex;
+	flex-flow: row wrap;
+	position: relative;
+	width: 100%;
+	margin: -1.5rem 0;
+}
+.pagination .nav-links {
+	display: flex;
+	position: relative;
+	padding: 0.5rem 0;
+	font-size: 0.8125rem;
+	color: $medium-gray;
+}
+.pagination .nav-links a {
+	display: block;
+}
+.pagination .nav-links a:hover {
+	color:$light-gray;
+}
+.pagination .nav-next {
+	margin-left: auto;
+}
+.pagination .page-numbers {
+	display: block;
+	padding: 0 0.625rem;
+}
+.pagination .page-numbers.current {
+	cursor: default;
+	color: $lighter-gray;
+}
+.pagination .page-numbers.current:hover {
+	color: $lighter-gray;
+}
+@media screen and (max-width: 767px) {
+	.pagination {
+		margin: -0.75rem 0;
+	}
+}
