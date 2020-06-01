@@ -35,14 +35,19 @@ $theme_version = '1.1.0';
 
 	/**
 	 * General Theme Settings
+/**
+	 * Loading All CSS Stylesheets and Javascript Files
 	 *
 	 * @since v1.0
 	 */
-	if ( ! function_exists( 'themes_starter_setup_theme' ) ) :
-		function themes_starter_setup_theme() {
+	function themes_starter_scripts_loader() {
+		global $theme_version;
 
-			// Make theme available for translation: Translations can be filed in the /languages/ directory
-			load_theme_textdomain( 'my-theme', get_template_directory() . '/languages' );
+		// 1. Styles
+		wp_enqueue_style( 'style', get_template_directory_uri() . '/style.css', false, $theme_version, 'all' );
+		// wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css', false, $theme_version, 'all' );
+		wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/build/app.min.css', false, $theme_version, 'all' ); // main.scss: Compiled Framework source + custom styles
+		
 
 			// Theme Support
 			add_theme_support( 'title-tag' );
