@@ -5,206 +5,90 @@
 
 */
 
- /**
-  * General
-  */
- 
- img {
-   max-width: 100% !important;
-   height: auto;
-   vertical-align: middle;
- }
- 
- 
- /**
-  * WP Customisation
-  */
- 
- 
- /* If WP-Adminbar is visible */
- body.admin-bar {
-   
-   #header.fixed-top {
-     top: 32px;
-   }
-   
-   .edit-link a {
-     color: #FFF !important;
-     font-weight: normal !important;
-     text-decoration: none !important;
-     
-     &::before {
-       content: '\270E';
-       display: inline-block;
-       margin-right: 5px;
-     }
-     
-   }
- }
- 
- /* WordPress Embeds */
- 
- .post-thumbnail,
- .wp-video,
- .embed-responsive {
-   margin: 5px 0;
-   width: 100% !important;
- }
- 
- 
- /* Header */
- 
- .navbar-brand {
-   
-   img {
-     height: 40px;
-   }
-   
- }
- 
- .navbar-static-top {
-   margin-bottom: $grid-gutter-width;
- }
- 
- 
- /* Main */
- 
- #main {
-   margin-top: $spacer;
- }
- 
- 
- /* Footer */
- 
- #footer {
-   background-color: #FFF;
- 
-   p {
-     margin-top: 10px;
-   }
- 
-   .menu-item {
-     &.active,
-     &.current-menu-item,
-     &.current_page_item {
-       a {
-         color: $link-hover-color;
-       }
-     }
-   }
-   
- }
- 
- 
- /* Sidebar */
- 
- .widget-area {
-   
-   ul {
-     list-style: none;
-     padding: 0;
-   }
-   
- }
- 
- 
- /* Author */
- 
- .author-avatar {
-   
-   .avatar {
-     width: 64px;
-     height: auto;
-   }
- }
- 
- .author-info {
-   margin: 40px 0;
- 
-   h2, h3 {
-     margin-top: 0;
-   }
-   
- }
- 
- 
- /* Posts */
- 
- .sticky {
-   .card {
-     background-color: $gray-100;
-   }
- }
- 
- .entry-meta {
-   font-size: small;
-   margin-top: ($grid-gutter-width/2);
- }
- 
- .single {
-   .entry-content,
-   .post-navigation,
-   #comments-title {
-     margin: $grid-gutter-width 0;
-   }
- }
- 
- #comments {
-   margin-top: $grid-gutter-width;
- }
- 
- .comment-meta {
-   height: 40px;
- }
- 
- .comment-reply-title {
-   margin: $grid-gutter-width 0 ($grid-gutter-width/2)-gutter-width;
- }
- 
- .commentlist {
-   list-style: none;
-   margin: 0 auto;
-   width: 68.9%;
-     
-   > li.comment {
-     margin: 0 0 1.625em;
-     padding: 1.625em;
-     position: relative;
-   }
- 
-   .children {
-     list-style: none;
-     margin-top: 20px;
- 
-     > li.comment {
-       border-top: 1px solid $gray-300;
-       padding-top: 10px;
-       position: relative;
-     }
-   }
- 
-   .avatar {
-     width: 64px;
-     height: 64px;
-     border-radius: 50%;
-     box-shadow: 0 1px 2px $gray-600;
-     padding: 0;
-     position: absolute;
-     top: 0;
-     left: -102px;
-   }
-   
- }
- 
- 
- /**
-  * Responsive Design using "mixins/_breakpoints.scss"
-  */
- 
- @media (max-width: breakpoint-max(sm)) {
-   
-   #sidebar {
-     margin-top: 60px;
-   }
-   
- }
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, select, textarea, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+a {
+  color: inherit;
+  cursor: pointer; }
+
+input {
+  background-color: transparent; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+.screen-reader-text {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  word-wrap: normal !important;
+  border: 0; }
+
+.screen-reader-text:focus {
+  display: block;
+  top: 5px;
+  left: 5px;
+  z-index: 100000;
+  clip: auto !important;
+  -webkit-clip-path: none;
+          clip-path: none;
+  width: auto;
+  height: auto;
+  padding: 1rem 1.5rem;
+  color: #21759b;
+  font-size: 1rem;
+  line-height: normal;
+  text-decoration: none;
+  background-color: #eee; }
