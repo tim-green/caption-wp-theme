@@ -1,6 +1,6 @@
 /*!
-Theme Name: Greeny Framework
-Theme URI: https//framework-wp.timgreen.ws
+Theme Name: Caption
+Theme URI: https//themes.timgreen.ws/caption
 Author: Tim Green
 Author URI: https://www.timgreen.ws
 Description: WordPress Starter Theme/Framework
@@ -8,7 +8,7 @@ Version: 2.2.0
 License: GPL version 2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0
 Tags: custom-background, custom-colors, featured-images, flexible-header, microformats, post-formats, rtl-language-support, theme-options, translation-ready, accessibility-ready
-Text Domain: my-theme
+Text Domain: captionwp
 */
 
 /* Don't overwrite this file. Compile "/assets/main.(less|scss)" to "/assets/build/app.min.css" */
