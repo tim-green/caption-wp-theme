@@ -56,6 +56,7 @@ $theme_version = '1.1.0';
 			add_theme_support( 'html5', array(
 				'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
 			) );
+		wp_enqueue_style( 'hack-font', '//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css', false, $theme_version, 'all' ); // obtain hack font from cdn
 
 			// Add support for Block Styles.
 			add_theme_support( 'wp-block-styles' );
