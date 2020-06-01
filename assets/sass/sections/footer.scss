@@ -5,6 +5,37 @@
 
 */
 
-.footer{
-  padding: 0 30px 150px;
+.footer {
+  display: block;
+  position: relative;
+  clear: both;
+  width: 40rem;
+  max-width: 100%;
+  margin: 3rem auto 0;
+  padding: 0 1.25rem;
+}
+.footer .footer-copy {
+  display: block;
+  cursor: default;
+  padding: 1rem 0.625rem;
+  font-size: 0.75rem;
+  text-align: left;
+  color: #717e8c;
+  border-top: solid 1px $darkish-blue;
+}
+
+.footer .footer-copy a:hover {
+  color: $light-gray;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+      margin-top: 1.5rem;
+ }
+}
+
+@media screen and (max-width: 479px) {
+  .footer {
+      padding: 0 0.75rem;
+ }
 }
