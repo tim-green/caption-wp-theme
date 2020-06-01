@@ -22,3 +22,13 @@
                 );
             ?>
         </figure>
+
+        <ul class="card-summary">
+            <?php
+                if ( function_exists( 'captionwp_show_summary' ) ) {
+                    captionwp_show_summary();
+                }
+            ?>
+        </ul>
+    </div>
+</article>
