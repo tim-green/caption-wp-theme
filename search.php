@@ -1,36 +1,35 @@
 <?php
 /**
- * The Template for displaying Search Results pages.
+ * Template Name: Search template file
+ * @package captionwp
+ * @since 1.1
  */
 
 	get_header();
 ?>
 
-	<?php if ( have_posts() ) : ?>
-		
-		<header class="page-header">
-			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'my-theme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-		</header>
+<section class="content" id="content">
+<?php
+        get_search_form();
 
-		<?php
-			get_template_part( 'archive', 'loop' );
-		?>
-	
-	<?php else : ?>
-	
-		<article id="post-0" class="post no-results not-found">
-			<header class="entry-header">
-				<h1 class="entry-title"><?php _e( 'Nothing Found', 'my-theme' ); ?></h1>
-			</header><!-- .entry-header -->
-			
-			<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'my-theme' ); ?></p>
-			
-			<?php get_search_form(); ?>
-		</article><!-- /#post-0 -->
-	
-	<?php
-		endif;
-		wp_reset_postdata(); // end of the loop.
-	?>
-	
+        if ( have_posts() && get_search_query() ) {
+            if ( get_the_archive_title() ) {
+                get_template_part( 'partials/caption', 'search' );
+            }
+
+            while( have_posts() ) {
+                the_post();
+
+                // Include default content partial
+                get_template_part( 'partials/content' );
+            }
+
+            // Show navigation
+            the_posts_pagination();
+        } else {
+            // If no content, include the "No posts found" template
+            get_template_part( 'partials/caption', 'none' );
+        }
+    ?>
+</section>
 <?php get_footer(); ?>
