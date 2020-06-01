@@ -84,21 +84,21 @@
 }
 
 .card .card-summary span {
-    color: $orange;
+    color: $white;
 }
 
 .card .card-summary strong {
-    color: $light-cyan;
+    color: $lighter-gray;
 }
 
 .card .card-summary a {
     position: relative;
     z-index: 2;
-    color: $light-cyan;
+    color: $lighter-gray;
     border: none;
 }
 .card .card-summary a:hover {
-    color: $mid-cyan;
+    color: $soft-gray;
 }
 
 @media screen and (max-width: 479px) {
