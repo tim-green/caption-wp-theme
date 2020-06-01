@@ -70,19 +70,21 @@ $theme_version = '1.1.0';
 			// Date/Time Format
 			$theme_dateformat = get_option( 'date_format' );
 			$theme_timeformat = 'H:i';
-
-			// Default Attachment Display Settings
-			update_option( 'image_default_align', 'none' );
-			update_option( 'image_default_link_type', 'none' );
-			update_option( 'image_default_size', 'large' );
-
-			// Custom CSS-Styles of Wordpress Gallery
-			add_filter( 'use_default_gallery_style', '__return_false' );
-
+		if ( is_rtl() ) {
+			wp_enqueue_style( 'rtl', get_template_directory_uri() . '/assets/css/rtl.min.css', false, $theme_version, 'all' );
 		}
-		add_action( 'after_setup_theme', 'themes_starter_setup_theme' );
-	endif;
 
+		// 2. Scripts
+		wp_enqueue_script( 'bootstrapjs', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', array( 'jquery' ), $theme_version, true );
+		wp_enqueue_script( 'mainjs', get_template_directory_uri() . '/assets/js/main.min.js', false, $theme_version, true );
+
+		wp_enqueue_script( 'bootstrapjsCDN', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', false, $theme_version, true );
+		wp_enqueue_script( 'popperCDN', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', false, $theme_version, true );
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+	}
 
 	/**
 	 * Fire the wp_body_open action.
