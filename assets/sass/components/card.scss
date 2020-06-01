@@ -52,11 +52,15 @@
 
 .card .card-summary {
     display: block;
-    padding: 1rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     font-family: "Hack", monospace;
     font-size: 0.6875rem;
     color: $medium-gray;
 }
+.card .card-summary:hover{
+    background: $dark-gray;
+}
+
 .card .card-summary::before {
     content: "Caption: {";
     display: block;
