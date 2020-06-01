@@ -7,11 +7,85 @@
 
 .header{
   display: block;
-  padding: 150px 30px 0;
-  width: 420px;
+  position: relative;
+  width: 40rem;
   max-width: 100%;
+  margin: 3rem auto 1.5rem;
+  padding: 0 1.25rem;
+}
 
-  h1{
-    margin: 0 0 30px;
-  }
+.header .header-menu{
+  display:block;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #373e48; 
+}
+
+.header .header-menu::after{
+  content:'';
+  display:block;
+  position: absolute;
+  top:0; right:0;
+  z-index: 1;
+  pointer-events: none;
+  height: 100%;
+  width: 1.5rem;
+      background: linear-gradient(90deg, rgba(33, 37, 43, 0), #21252b); 
+}
+
+
+@media screen and (max-width: 767px) {
+  .header {
+    margin-top: 1.5rem; 
+  } 
+}
+
+@media screen and (max-width: 479px) {
+  .header {
+    padding: 0 0.75rem; 
+  } 
+}
+
+
+.menu {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  scrollbar-width: none;
+  margin-bottom: -1px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-size: 0.8125rem;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu .menu-item {
+  display: block;
+  position: relative;
+}
+
+.menu .menu-item.current-menu-item a {
+  color: $lighter-gray;
+  border-bottom-color: $lighter-gray;
+}
+
+.menu a {
+  display: block;
+  padding: 0.375rem 0.625rem;
+  white-space: nowrap;
+  color: $medium-gray;
+  border-bottom: 1px solid transparent;
+}
+
+.menu a:hover {
+  color: $light-gray;
+}
+
+.menu a:focus {
+  outline-offset: -5px;
 }
