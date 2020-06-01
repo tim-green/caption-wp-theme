@@ -3,13 +3,12 @@
 $theme_version = '1.1.0';
 
 	/**
-	 * Include Theme Customizer
+	 * Caption will only works for WP 5.0 or later
 	 *
 	 * @since v1.0
 	 */
-	$theme_customizer = get_template_directory() . '/inc/customizer.php';
-	if ( is_readable( $theme_customizer ) ) {
-		require_once $theme_customizer;
+	if ( version_compare( $GLOBALS['wp_version'], '5.0', '<' ) ) {
+		wp_die( 'Sorry this theme requires atlease WordPress 5.0 or up' );
 	}
 
 
