@@ -59,27 +59,46 @@ $color-primary: #000;
 
 //Black
 $black: #000;
-$medium-black: #1d1d1d;
-$darker-gray: #272727;
-$dark-gray:#101010;
-$medium-gray: #888;
-$light-gray: #d1d1d1;
+
+//gray
+$dark-gray:#21252b;
+$darkish-blue: #373e48;
+$bluish-gray: #4f5862;
+$medium-gray: #717e8c;
+$soft-gray: #b4b4b4;
+$light-gray: #8d98a3;
+$lighter-gray: #dadada;
 
 //White
 $white: #fff;
+$off-white: #eee;
 
 //Red
 $soft-red: #dc535b;
 $medium-red: #c9373f;
 
+//Orange
+$orange: #e0923c;
+
 //Blue
-$aqua: #00add0;
+$darkish-blue: #4f5862;
+$grayish-blue: #282c34;
+$darkish-blue: #2c3139;
+$dark-blue: #1a1e22;
+$deep-blue: #1a1e22;
+$blue: #21759b;
+
+//Cyan
+$mod-cyan: #56b6c2;
+$mid-cyan: #8eced6;
+$light-cyan: #56b6c2;
+
 //Purple
 $magenta: #930f5b;
 
 // Base
 
-$base-line-height: 1.7;
+$base-line-height: 1.5;
 
 //Google font
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
@@ -88,7 +107,7 @@ $base-line-height: 1.7;
 
 //Fonts
 $font-stack: Helvetica, sans-serif;
-$roboto-slab: 'Roboto Slab', serif;   
+$hack-font: 'Hack';   
 $open-sans: 'Open Sans', sans-serif;
 
 // Weights
@@ -107,3 +126,5 @@ $text-cap: capitalize;
 $text-lower: lowercase;
 $text-upper: uppercase;
 $text-none: none;
+
+//Headings
