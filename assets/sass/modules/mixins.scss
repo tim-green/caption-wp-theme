@@ -130,3 +130,18 @@
   border-top-left-radius: $radius;
   background-clip: padding-box;
 }
+
+
+/// Mixin to prefix a property
+// example: @include prefix(transform, rotate(45deg), webkit ms);
+// @param {String} $property - Property name
+// @param {*} $value - Property value
+// @param {List} $prefixes (()) - List of prefixes to print
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
