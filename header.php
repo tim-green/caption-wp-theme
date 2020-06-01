@@ -1,3 +1,11 @@
+<?php
+/**
+ * Header
+ * @package captionwp
+ * @since 1.1
+ */
+
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
