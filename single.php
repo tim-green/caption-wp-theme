@@ -1,43 +1,31 @@
 <?php
 /**
- * The Template for displaying all single posts.
+ * Template Name: single post
+ * @package captionwp
+ * @since 1.1
  */
 
 	get_header();
 ?>
 
-	<?php
-		if ( have_posts() ) :
-			while ( have_posts() ) :
-			the_post();
-	?>
-		
-		<?php
-			get_template_part( 'content', 'single' );
-			
-			// If comments are open or we have at least one comment, load up the comment template
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-		?>
-		
-	<?php
-			endwhile;
-		endif;
-		wp_reset_postdata(); // end of the loop.
-	?>
-	
-	<?php
-		$count_posts = wp_count_posts();
+<section class="content" id="content">
+<?php
+        if ( have_posts() ) {
+            while( have_posts() ) {
+                the_post();
 
-		if ( $count_posts->publish > '1' ) :
-	?>
-		<div class="post-navigation d-flex justify-content-between">
-			<div><?php previous_post_link( '%link', '<span aria-hidden="true">&larr;</span> ' . __( 'Previous Post', 'my-theme' ) ); ?></div>
-			<div><?php next_post_link( '%link', __( 'Next Post', 'my-theme' ) . ' <span aria-hidden="true">&rarr;</span>' ); ?></div>
-		</div><!-- /.post-navigation -->
-	<?php
-		endif;
-	?>
+                // Get single partial
+                get_template_part( 'partials/content', 'single' );
+
+                // If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) {
+					comments_template();
+				}
+            }
+        } else {
+            get_template_part( 'partials/caption', 'none' );
+        }
+    ?>
+</section>
 
 <?php get_footer(); ?>
