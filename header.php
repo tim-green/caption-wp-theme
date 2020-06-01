@@ -26,3 +26,17 @@
 
 <?php wp_body_open();?>
 
+<header class="header">
+<?php
+        if ( has_nav_menu( 'primary' ) ) {
+            wp_nav_menu( array(
+                'theme_location' => 'primary',
+                'container' => 'nav',
+                'container_class' => 'header-menu',
+                'items_wrap' => '<ul class="menu">%3$s</ul>',
+                'echo' => true,
+                'depth' => 1
+            ) );
+        }
+    ?>
+</header>
