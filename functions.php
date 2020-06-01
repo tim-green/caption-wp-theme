@@ -85,24 +85,49 @@ $theme_version = '1.1.0';
 			wp_enqueue_script( 'comment-reply' );
 		}
 	}
+	add_action( 'wp_enqueue_scripts', 'themes_starter_scripts_loader' );
 
 	/**
-	 * Fire the wp_body_open action.
+	 * Default Theme Settings
 	 *
-	 * Added for backwards compatibility to support pre 5.2.0 WordPress versions.
-	 *
-	 * @since v2.2
+	 * @since v1.0
 	 */
-	if ( ! function_exists( 'wp_body_open' ) ) :
-		function wp_body_open() {
-			/**
-			 * Triggered after the opening <body> tag.
-			 *
-			 * @since v2.2
-			 */
-			do_action( 'wp_body_open' );
-		}
-	endif;
+	function captionwp_setup() {
+		// Make theme available for translation.
+		load_theme_textdomain( 'captionwp' );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
+		// Let WordPress manage the document title.
+		add_theme_support( 'title-tag' );
+		// Enable support for Post Thumbnails on posts and pages.
+		add_theme_support( 'post-thumbnails' );
+		// Set post thumbnail default size
+		set_post_thumbnail_size( 300, 300, true );
+		// Add custom thumbnail image size
+		add_image_size( 'captionwp-featured', 1200, 900, true );
+		// This theme uses wp_nav_menu() in header and footer.
+		register_nav_menus(
+			array(
+				'primary' => __( 'Primary menu', 'captionwp' ),
+			)
+		);
+		// Switch default core markup to output valid HTML5
+		add_theme_support( 'html5',
+			array(
+				'search-form',
+				'gallery',
+				'caption',
+				'comment-list'
+			)
+		);
+	}
+	add_action( 'after_setup_theme', 'captionwp_setup' );
+
+	/**
+	 * Custom Theme Image Sizes
+	 *
+	 * @since v1.0
+	 */
 
 
 	/**
