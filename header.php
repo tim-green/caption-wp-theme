@@ -27,6 +27,9 @@
 <?php wp_body_open();?>
 
 <header class="header">
+    <h2 class="site-title"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) );?>
+    </h2>
+    
 <?php
         if ( has_nav_menu( 'primary' ) ) {
             wp_nav_menu( array(
