@@ -27,7 +27,10 @@
 <?php wp_body_open();?>
 
 <header class="header">
-    <h2 class="site-title"><?php echo esc_attr( get_bloginfo( 'name', 'display' ) );?>
+    <h2 class="site-title">
+    <a class="logo_item" href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+    <?php echo esc_attr( get_bloginfo( 'name', 'display' ) );?>
+    </a>
     </h2>
     
 <?php
