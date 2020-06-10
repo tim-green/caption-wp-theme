@@ -34,7 +34,7 @@ a{
 }
 
 a:hover{
-  @include prefix(trensition, color .25s, webkit ms);
+  @include prefix(transition, color .25s, webkit ms);
 }
 
 label{
