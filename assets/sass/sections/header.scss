@@ -46,13 +46,24 @@
   } 
 }
 
+
 .site-title{
   font-size: 1.5rem;
   padding:0 0 1.5rem 0.625rem;
   text-align: center;
   font-family: 'hack';
+  font-weight: $normal-weight;
+}
+
+.site-title a{
   color: $bluish-gray;
   text-shadow: 0px 2px 0 $grayish-blue;
+  text-decoration: none;
+}
+
+.site-title a:hover{
+  color: $orange;
+  @include prefix(transition, color .8s, moz webkit ms);
 }
 
 .menu {
