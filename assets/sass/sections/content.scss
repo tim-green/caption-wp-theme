@@ -41,10 +41,12 @@
 .entry a, .comments .comment-body .comment-content a {
     color: $orange;
     text-decoration: none;
+    @include prefix(transition, color .8s, webkit ms);
 }
 
 .entry a:hover, .comments .comment-body .comment-content a:hover {
-    color: $orange;
+    color: $white;
+    @include prefix(transition, color .8s, webkit ms);
 }
 
 .entry a:hover img, .comments .comment-body .comment-content a:hover img {
@@ -298,3 +300,4 @@
         margin-bottom: 1.5rem;
    }
 }
+
