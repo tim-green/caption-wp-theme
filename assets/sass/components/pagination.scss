@@ -21,23 +21,32 @@
 }
 .pagination .nav-links a {
 	display: block;
+	color: $white;
 }
 .pagination .nav-links a:hover {
-	color:$light-gray;
+	color:$orange;
+	text-decoration: none;
+	@include prefix(transition, color .8s, moz webkit ms);
 }
 .pagination .nav-next {
 	margin-left: auto;
 }
 .pagination .page-numbers {
 	display: block;
-	padding: 0 0.625rem;
+	padding: 0.125rem 0.625rem;
 }
 .pagination .page-numbers.current {
 	cursor: default;
-	color: $lighter-gray;
+	color: $darkish-blue;
+	background: $orange;
+	border-radius: 3px;
+	font-weight: $bold-weight;
+	@include prefix(transition, background-color .8s, moz webkit ms);
 }
 .pagination .page-numbers.current:hover {
 	color: $lighter-gray;
+	@include prefix(transition, background-color .8s, moz webkit ms);
+	background: transparent;
 }
 @media screen and (max-width: 767px) {
 	.pagination {
