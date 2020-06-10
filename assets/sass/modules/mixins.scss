@@ -12,16 +12,16 @@
   background-color: $from;
   
   /* Firefox 3.6+ */
-  background-image: -moz-linear-gradient(left, $from, $to $stop);
+  background-image: -moz-linear-gradient(top, $from, $to $stop);
 
   /* Safari 4+, Chrome 1+ */
-  background-image: -webkit-gradient(linear,left top,right top, $from,color-stop(0%, $from), color-stop($to));
+  background-image: -webkit-gradient(linear,top top,right top, $from,color-stop(0%, $from), color-stop($to));
 
   /* Safari 5.1+, Chrome 10+ */
-  background-image: -webkit-linear-gradient(left, $from, $to, $stop);
+  background-image: -webkit-linear-gradient(top, $from, $to, $stop);
 
   /* Opera 11.10+ */
-  background-image: -o-linear-gradient(left, $from, $to, $stop);
+  background-image: -o-linear-gradient(top, $from, $to, $stop);
   /* Standard */
   background: linear-gradient(90%, $from, $to, $stop);
 
@@ -30,6 +30,30 @@
 }
 
 
+//main gradient
+//@include body-gradient($soft-red, $medium-red, $magenta);
+
+@mixin body-gradient($from, $to, $stop: 85%) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+  
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient(top, $from, $to, $stop);
+
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear,top top,right top, $from,color-stop(0%, $from), color-stop($to));
+
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient(top, $from, $to, $stop);
+
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient(top, $from, $to, $stop);
+  /* Standard */
+  background: linear-gradient(85%, $from, $to, $stop);
+
+  /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$from', endColorstr='$to',GradientType=1 );
+}
 
 /**
  * Convert font-size from px to rem with px fallback
