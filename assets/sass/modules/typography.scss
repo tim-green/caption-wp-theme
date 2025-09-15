@@ -5,6 +5,8 @@
 
 */
 
+@use '../modules/variables' as *;
+
 body{
   line-height: $base-line-height;
 }

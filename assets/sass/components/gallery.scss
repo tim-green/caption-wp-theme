@@ -4,6 +4,10 @@
   +
 
 */
+
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
+
 .gallery {
 	display: grid;
 	grid-gap: 0.5rem;

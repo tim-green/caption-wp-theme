@@ -4,6 +4,10 @@
   +
 
 */
+
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
+
 .comments {
     display: block;
     position: relative;

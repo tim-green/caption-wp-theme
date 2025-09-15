@@ -7,24 +7,16 @@
 
 /*
 
- ==== Bootstrap Import ====
-
-*/
-
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-/*
-
  ==== modules ====
 
 */
 
 
-@import "modules/mixins";
-@import "modules/variables";
-@import "modules/wp-default";
-@import "modules/base";
-@import "modules/typography";
+@forward "modules/mixins";
+@forward "modules/variables";
+@forward "modules/wp-default";
+@forward "modules/base";
+@forward "modules/typography";
 
 /*
 
@@ -40,23 +32,23 @@
 
 */
 
-@import "components/search-form";
-@import "components/pagination";
-@import "components/caption";
-@import "components/card";
-@import "components/comments";
-@import "components/gallery";
-@import "components/skip";
+@forward "components/search-form";
+@forward "components/pagination";
+@forward "components/caption";
+@forward "components/card";
+@forward "components/comments";
+@forward "components/gallery";
+@forward "components/skip";
 /*
 
  ==== Sections ====
 
 */
 
-@import "sections/header";
-@import "sections/main";
-@import "sections/content";
-@import "sections/footer";
+@forward "sections/header";
+@forward "sections/main";
+@forward "sections/content";
+@forward "sections/footer";
 
 
 /*

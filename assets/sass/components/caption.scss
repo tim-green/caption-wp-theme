@@ -5,6 +5,9 @@
 
 */
 
+@use '../modules/variables' as *;
+@use '../modules/mixins' as *;
+
 .caption {
 	display: block;
 	position: relative;
