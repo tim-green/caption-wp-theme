@@ -15,8 +15,7 @@
 	}
 ?>
 <div id="comments">
-	<?php
-		hp
+	<?php /*
         if ( have_comments() ) {
             printf(
                 '<div class="comment-list">%s</div>',
@@ -38,6 +37,6 @@
             array(
                 'submit_field' => '<div class="comment-submit">%1$s %2$s</div>'
             )
-        );
+        ); */
 	?>
 </div><!-- /#comments -->
