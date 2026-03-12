@@ -9,7 +9,7 @@
 ?>
 
 <section class="content" id="content">
-<?php
+    <?php
         if ( have_posts() ) {
             while( have_posts() ) {
                 the_post();
@@ -22,7 +22,8 @@
 					comments_template();
 				}
             }
-        } else {
+        } 
+        else {
             get_template_part( 'partials/caption', 'none' );
         }
     ?>

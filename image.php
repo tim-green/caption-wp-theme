@@ -85,8 +85,7 @@
 				?>
 			
 			<?php
-					endwhile;
-				endif;
+				endwhile;endif;
 				wp_reset_postdata(); // end of the loop.
 			?>
 		</div><!-- /.col -->

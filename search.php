@@ -9,7 +9,7 @@
 ?>
 
 <section class="content" id="content">
-<?php
+    <?php
         get_search_form();
 
         if ( have_posts() && get_search_query() ) {

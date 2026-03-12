@@ -7,7 +7,7 @@
 ?>
 
 <footer class="footer">
-<?php
+    <?php
         if ( get_theme_mod( 'captionwp_footer_copy' ) ) {
             printf(
                 '<div class="footer-copy">%s</div>',
@@ -18,6 +18,5 @@
 </footer>
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
